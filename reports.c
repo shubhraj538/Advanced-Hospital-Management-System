@@ -1,6 +1,6 @@
 /*
  * HIMS - Hospital Information Management System
- * PART 20 : REPORTS (monthly appointments, revenue, patient registration)
+ * PART 12 : REPORTS (monthly appointments, revenue, patient registration)
  */
 
 char monthnames[12][10] = {"January", "February", "March", "April", "May", "June",
