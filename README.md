@@ -38,14 +38,31 @@ A CLI-based Hospital Information System written in C. Features multi-role access
 
 All data persists in local flat text files via standard C File I/O (stdio.h):
 
-* `base.c` - Core menus, business logic, and analytics
-* `login.c` - Role authentication and session handling
-* `patients.txt` - Patient accounts and personal records
-* `doctors.txt` - Doctor profiles, rates, and schedule slots
-* `appointments.txt` - Central booking records
-* `payments.txt` - Payment transaction references
-* `reviews.txt` - Doctor ratings and feedback logs
-* `waitlist.txt` - Sequential queue data for filled slots
+    main.c           main menu (patient / doctor / admin) + patient dashboard
+    HIMS.h           structures, arrays, and the list of the other files
+    common.c         input helpers, dates, time slots, reading/saving the text files
+    waitlist.c       Part 19 - waiting list (+ cancelrecord, the one place that cancels)
+    notifications.c  Part 10 - notifications
+    patient.c        Part 1  - patient account + find a doctor
+    appointments.c   Part 2  - book, cancel, reschedule, view
+    payment.c        Part 3  - simulated payment
+    reviews.c        Part 4  - ratings and reviews
+    receipt.c        Part 9  - digital receipt
+    records.c        Part 8  - patient records
+    doctor.c         Part 5  - doctor side
+    stats.c          Part 7  - statistics
+    reports.c        Part 20 - reports
+    admin.c          Part 6  - admin side
+
+Appointment flow:
+    Pending (booked) -> Confirmed (payment verified) -> Completed (doctor)
+    Cancelled can happen from Pending or Confirmed (patient, doctor or admin).
+    Payment status: Pending / Verified / Failed.
+
+Text files (doctors.txt is included, the others are made automatically):
+    doctors.txt  pendingdoctors.txt  patients.txt  appointments.txt
+    reviews.txt  waitlist.txt  categories.txt
+
 
 ---
 
