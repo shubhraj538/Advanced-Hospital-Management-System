@@ -1,6 +1,6 @@
 /*
  * HIMS - Hospital Information Management System
- * PART 19 : WAITING LIST
+ * PART 11 : WAITING LIST
  * If every slot is booked the patient can join the waiting list of a slot.
  * When that slot is cancelled, the first person in the queue gets it.
  */
