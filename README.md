@@ -62,5 +62,5 @@ All data persists in local flat text files via standard C File I/O (stdio.h):
 Compile using GCC:
 
 ```bash
-gcc base.c login.c -o hospital_sys
-./hospital_sys
+    gcc main.c -o hims
+    ./hims            (on Windows: hims.exe)
